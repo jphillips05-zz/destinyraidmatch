@@ -1,0 +1,29 @@
+<head>
+  <title>Build Your Team</title>
+</head>
+
+<body>
+	<div>add</div>
+	{{> loginButtons}}
+	<div class="msgContainer">
+		{{#each msgs}}
+			{{> msg}}
+		{{/each}}
+	</div>
+	<form class="new-msg">
+		<input class="system" type="radio" name="system" value="PS3" />PS3 <br/>
+		<input class="system" type="radio" name="system" value="PS4" />PS4 <br/>
+		<input class="system" type="radio" name="system" value="Xbox360" />Xbox 360 <br/>
+		<input class="system" type="radio" name="system" value="Xbox1" />Xbox1 <br/>
+		<input class="system" type="radio" name="system" value="all"/>all <br/>
+
+		<textarea name="msg"></textarea>
+		<input type="submit" value="Send" />
+	</form>
+	<div>add</div>
+</body>
+
+<template name="msg">
+  <p>{{system}} - {{text}}</p>
+</template>
+
